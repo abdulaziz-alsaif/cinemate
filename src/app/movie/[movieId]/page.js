@@ -35,7 +35,7 @@ export default async function MoviePage({ params }) {
 
   const isUserAuthenticated = !!user
 
-  const userId = user?.userId || ""
+  const userId = user?.id || ""
 
   const movieId = (await params).movieId;
   const movie = await getMovieDetails(movieId);
