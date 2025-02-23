@@ -39,7 +39,7 @@ function EpisodeCard({ episode, seasonNumber }) {
             <Separator />
             <span>{releaseDate ? releaseDate: "Release Date Unknown"}</span>
             <Separator />
-            <span>{runtime}m</span>
+            <span>{runtime ? `${runtime}m`: "N/A"}</span>
           </div>
         </div>
         <p className="mt-2 text-zinc-500">{overview}</p>

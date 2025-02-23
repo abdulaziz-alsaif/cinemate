@@ -2,7 +2,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 import { Menu } from "lucide-react";
 
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Button } from "./ui/button";
 
 import NavLinks from "./NavLinks";
@@ -23,6 +23,10 @@ function Navigation() {
 
       <VisuallyHidden asChild>
         <SheetTitle></SheetTitle>
+      </VisuallyHidden>
+
+      <VisuallyHidden asChild>
+        <SheetDescription></SheetDescription>
       </VisuallyHidden>
 
       <SheetContent side="left" className="w-72 p-2">

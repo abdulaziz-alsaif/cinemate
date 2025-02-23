@@ -121,7 +121,6 @@ export async function getMedia(mediaType, category, page = 1, options = {}) {
   }
 }
 
-
 export async function getSearchResults(query, abortController) {
   try {
     const res = await fetch(`${BASE_API_URL}/search/multi?query=${query}`, {

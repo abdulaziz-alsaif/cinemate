@@ -35,8 +35,6 @@ export default async function Page({ params }) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  console.log(user)
-
   const isUserAuthenticated = !!user;
 
   const userId = user?.id || ""
