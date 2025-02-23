@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import { BASE_IMG_URL } from "@/utils/constants";
 
-function CarouselItem({ media }) {
+function CarouselItem({ media, index }) {
   const {
     id,
     backdropPath,
@@ -29,7 +29,7 @@ function CarouselItem({ media }) {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1280px"
         quality={95}
         className="object-cover"
-        priority
+        priority={index === 0}
       />
 
       <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/95 to-zinc-950/20"></div>

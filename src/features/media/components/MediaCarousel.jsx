@@ -48,9 +48,9 @@ function MediaCarousel({ mediaItems }) {
       className="h-full overflow-hidden border border-zinc-200"
     >
       <CarouselContent className="h-full" classNameParent="h-full">
-        {mediaItems.map((mediaItem) => (
+        {mediaItems.map((mediaItem, index) => (
           <CarouselItem key={mediaItem.id} className="h-full">
-            <CarouselItemMedia media={mediaItem} />
+            <CarouselItemMedia media={mediaItem} index={index} />
           </CarouselItem>
         ))}
       </CarouselContent>
