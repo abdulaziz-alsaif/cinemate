@@ -49,7 +49,7 @@ export type ExtractedTvShowEpisode = {
 
 export type WatchedListRecommendationType = {
   title: string;
-  tmdbRating: number;
+  tmdbRating: number | null | undefined;
   userRating: number | null;
   genres: string | null;
 };

@@ -10,10 +10,14 @@ import MediaImgWithFallback from "@/features/media/components/MediaImgWithFallba
 
 import { SupabaseMediaType } from "@/app/db/databaseSchema";
 
-type PartialSupabaseMedia = Omit<SupabaseMediaType, "genre" | "created_at"> & Partial<Pick<SupabaseMediaType, "genre" | "created_at">>;
+type PartialSupabaseMedia = Omit<SupabaseMediaType, "genre" | "created_at" | "tmdbId"> &
+  Partial<Pick<SupabaseMediaType, "genre" | "created_at" | "tmdbId">>;
 
-
-type MediaType = (Pick<Partial<SupabaseMediaType>, "tmdbId"> & Omit<PartialSupabaseMedia, "tmdbId"> & {id: number}) | PartialSupabaseMedia & {id?: number}
+type MediaType = (
+  { id: number } & Omit<PartialSupabaseMedia, "tmdbId"> & { tmdbId?: number }
+) | (
+  Omit<PartialSupabaseMedia, "tmdbId"> & { id?: number; tmdbId: number }
+);
 
 type HorizontalCardProps = {
   media: MediaType

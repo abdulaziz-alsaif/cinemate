@@ -6,7 +6,7 @@ export const SupabaseMediaSchema = z.object({
   mediaType: z.enum(["movie", "tv"]),
   overview: z.string().nullable(),
   posterPath: z.string().nullable(),
-  rating: z.number(),
+  rating: z.number().nullable().optional(),
   releaseDate: z.string().nullable(),
   title: z.string(),
   tmdbId: z.number(),

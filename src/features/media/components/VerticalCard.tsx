@@ -17,7 +17,7 @@ type MediaProps = {
     title: string;
     posterPath: string | null;
     releaseDate: string | null;
-    rating: number | null | undefined;
+    rating?: number | null | undefined;
     mediaType: MediaType;
 }
 

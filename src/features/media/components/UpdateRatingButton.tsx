@@ -27,7 +27,7 @@ type UpdateUserButtonProps = {
   currentRating: number,
 }
 
-function UpdateUserButton({ title, tmdbId, currentRating }: UpdateUserButtonProps) {
+function UpdateUserButton({ title, tmdbId, currentRating = 0 }: UpdateUserButtonProps) {
   const { toast } = useToast();
 
   const [open, setOpen] = useState(false);

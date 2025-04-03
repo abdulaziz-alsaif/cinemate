@@ -6,7 +6,14 @@ import { Button } from "@/components/ui/button";
 
 import { BASE_IMG_URL } from "@/utils/constants";
 
-function CarouselItem({ media, index }) {
+import { TrendingMediaPayloadType } from "@/features/media/services/tmbd-services"
+
+type CarouselItemProps = {
+  media: TrendingMediaPayloadType,
+  index: number
+}
+
+function CarouselItem({ media, index }: CarouselItemProps) {
   const {
     id,
     backdropPath,

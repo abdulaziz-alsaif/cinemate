@@ -39,7 +39,7 @@ async function WatchedList({ filterValue, sortByValue }: WatchedListProps) {
             <UpdateUserButton
               title={media.title}
               tmdbId={media.tmdbId}
-              currentRating={userRating}
+              currentRating={userRating || 0}
             />
             <RemoveMediaButton showIconOnly tmdbId={media.tmdbId}>
               Remove from watched
